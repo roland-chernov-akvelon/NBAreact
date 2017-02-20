@@ -90,6 +90,16 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
     }
+
+    signingConfigs {
+        release {
+            storeFile file("shared-insecure-keystore.jks")
+            storePassword "password"
+            keyAlias "app"
+            keyPassword "password"
+        }
+    }
+    
     splits {
         abi {
             reset()
